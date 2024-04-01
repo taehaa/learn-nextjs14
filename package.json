@@ -8,7 +8,9 @@
     "여기는 무엇이 들어가든 상관이 없지만": "여기는 next dev 를 꼭 적어줘야 함"
   },
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "",
   "license": "MIT",
