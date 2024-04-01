@@ -1,5 +1,6 @@
-import {API_URL} from "../app/constants";
+
 import styles from "../app/styles/movie-videos.module.css";
+import {API_URL} from "../app/constants";
 
 const VIDEO_URL = "https://youtube.com/embed/";
 
