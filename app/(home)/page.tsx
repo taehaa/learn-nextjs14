@@ -6,19 +6,20 @@ import {useEffect, useState} from "react";
 import Link from "next/link";
 import Movie from "../../components/movie";
 import styles from "../styles/home.module.css"
-//import {API_URL} from "../constants";
+import {API_URL} from "../constants";
+
 
 
 export const metadata = {
     title: "This is real Home"
 }
 
-/*async function getMovies() {
+async function getMovies() {
     //await new Promise( (resolove) => setTimeout(resolove, 10000) );
     return (
         fetch(API_URL).then(response => response.json())
     );
-}*/
+}
 
 /*function CsrMain () {
     const [ isLoading, setIsLoading ] = useState(true);
@@ -49,8 +50,7 @@ export const metadata = {
 
 
 async function SsrMain() {
-    //const movies = await getMovies();
-    const movies = [];
+    const movies = await getMovies();
     return (
         <div className={styles.container}>
             {movies.map( (movie) =>
