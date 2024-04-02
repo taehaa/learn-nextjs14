@@ -1,11 +1,23 @@
-import MovieInfo from "../../../../components/movie-info";
+import MovieInfo, {getMovie} from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
+
+interface IParams {
+    params: { id: string };
+}
+
+export async function generateMetadata({params: {id}}: IParams) {
+    const movie = await getMovie(id);
+    return {
+        title : movie.title
+    };
+}
+
 
 /**
  * SSR(server side rendering)
  */
-export default async function MovieDetail({params: {id}}: {params: {id: string};}) {
+export default async function MovieDetail({params: {id}}: IParams) {
     // 순처적으로 처리
     /*console.log(id);
     console.log(`start fetching`);
